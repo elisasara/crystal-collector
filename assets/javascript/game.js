@@ -17,21 +17,22 @@ $(document).ready(function () {
     $("#assignedNumber").html(goalNumber);
 
     // assign a random number between 1 and 12 to each gem
-    var purpleNumber = randomNumber(1, 12);
-    console.log(purpleNumber);
-    var greenNumber = randomNumber(1, 12);
-    console.log(greenNumber);
-    var blueNumber = randomNumber(1, 12);
-    console.log(blueNumber);
-    var redNumber = randomNumber(1, 12);
-    console.log(redNumber);
-
-    // assign the appropriate number the that gem
+    var purpleNumber = $("#purple").attr("value", randomNumber(1,12));
+    // var purpleNumber = randomNumber(1, 12);
+    // var purpleVal = $("#purple").val(purpleNumber);
+    // console.log(purpleNumber);
+    var greenNumber = $("#green").attr("value", randomNumber(1, 12));
+    // console.log(greenNumber);
+    var blueNumber = $("#blue").attr("value", randomNumber(1, 12));
+    // console.log(blueNumber);
+    var redNumber = $("#red").attr("value", randomNumber(1, 12));
+    // console.log(redNumber);
 
 
     // on click take the value of the number assigned to the gem clicked and add it to the total of the user score
-    $("img").click(function (){
-        $("img").event.target
+    $(".gem").click(function (){
+        var numVal = $(".gem").event.currentTarget("value");
+        console.log(numVal);
     })
 
 
