@@ -1,0 +1,19 @@
+img {
+    max-width: 75px;
+    height: auto;
+}
+
+#gemImages {
+    width: 325px;
+    margin: auto;
+}
+
+#userScore {
+    font-size: 36px;
+    text-align: center;
+}
+
+#assignedNumber {
+    font-size: 36px;
+    text-align: center;
+}
