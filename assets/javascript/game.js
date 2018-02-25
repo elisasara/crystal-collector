@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
     // display the starting value of the user total of 0
-    var startvalue = 0;
-    $("#userScore").html(startvalue);
+    var startValue = 0;
+    $("#userScore").html(startValue);
 
     // function to choose a random number between the assigned numbers
     function randomNumber(min, max) {
@@ -17,23 +17,46 @@ $(document).ready(function () {
     $("#assignedNumber").html(goalNumber);
 
     // assign a random number between 1 and 12 to each gem
-    var purpleNumber = $("#purple").attr("value", randomNumber(1,12));
-    // var purpleNumber = randomNumber(1, 12);
-    // var purpleVal = $("#purple").val(purpleNumber);
-    // console.log(purpleNumber);
-    var greenNumber = $("#green").attr("value", randomNumber(1, 12));
-    // console.log(greenNumber);
-    var blueNumber = $("#blue").attr("value", randomNumber(1, 12));
-    // console.log(blueNumber);
-    var redNumber = $("#red").attr("value", randomNumber(1, 12));
-    // console.log(redNumber);
+    var purpleNumber = randomNumber(1,12);
+    console.log(purpleNumber);
+    var greenNumber = randomNumber(1, 12);
+    console.log(greenNumber);
+    var blueNumber = randomNumber(1, 12);
+    console.log(blueNumber);
+    var redNumber = randomNumber(1, 12);
+    console.log(redNumber);
+    // var purpleNumber = $("#purple").attr("value", randomNumber(1,12));
+    // var greenNumber = $("#green").attr("value", randomNumber(1, 12));
+    // var blueNumber = $("#blue").attr("value", randomNumber(1, 12));
+    // var redNumber = $("#red").attr("value", randomNumber(1, 12));
 
 
     // on click take the value of the number assigned to the gem clicked and add it to the total of the user score
-    $(".gem").click(function (){
-        var numVal = $(".gem").event.currentTarget("value");
-        console.log(numVal);
-    })
+            $("#purple").on("click", function (){
+                startValue = startValue + purpleNumber;
+                $("#userScore").html(startValue);
+            });
+
+            $("#green").on("click", function(){
+                startValue = startValue + greenNumber;
+                $("#userScore").html(startValue);
+            });
+
+            $("#blue").on("click", function(){
+                startValue = startValue + blueNumber;
+                $("#userScore").html(startValue);
+            });
+
+            $("#red").on("click", function(){
+                startValue = startValue + redNumber;
+                $("#userScore").html(startValue);
+            });
+
+            if (startValue === goalNumber) {
+                
+            }
+
+    });
 
 
     // if the total of the user score matches the random number chosen then the user wins and one win gets added to the win total
@@ -43,4 +66,3 @@ $(document).ready(function () {
     // once either a win or loss occurs then the game resets, picking a new random number and assigning new values to each gem
 
 
-})
