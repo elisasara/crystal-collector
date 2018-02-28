@@ -80,38 +80,6 @@ $(document).ready(function () {
         winsLosses();
     };
 
-
-            // $("#purple").on("click", function (){
-            //     startValue = startValue + purpleNumber;
-            //     $("#userScore").html(startValue);
-            //     winsLosses();
-            // });
-
-            // $("#green").on("click", function(){
-            //     startValue = startValue + greenNumber;
-            //     $("#userScore").html(startValue);
-            //     winsLosses();
-            // });
-
-            // $("#blue").on("click", function(){
-            //     startValue = startValue + blueNumber;
-            //     $("#userScore").html(startValue);
-            //     winsLosses();
-            // });
-
-            // $("#red").on("click", function(){
-            //     startValue = startValue + redNumber;
-            //     $("#userScore").html(startValue);
-            //     winsLosses();
-            // });
-
     });
-
-
-    // if the total of the user score matches the random number chosen then the user wins and one win gets added to the win total
-
-    // if the total of the user score goes over the random number then user loses and one loss gets added to the loss total
-
-    // once either a win or loss occurs then the game resets, picking a new random number and assigning new values to each gem
 
 
