@@ -25,34 +25,23 @@ $(document).ready(function () {
 
     // assign a random number between 1 and 12 to each gem
     var purpleNumber = randomNumber(1,12);
-    console.log(purpleNumber);
     var greenNumber = randomNumber(1, 12);
-    console.log(greenNumber);
     var blueNumber = randomNumber(1, 12);
-    console.log(blueNumber);
     var redNumber = randomNumber(1, 12);
-    console.log(redNumber);
-    // var purpleNumber = $("#purple").attr("value", randomNumber(1,12));
-    // var greenNumber = $("#green").attr("value", randomNumber(1, 12));
-    // var blueNumber = $("#blue").attr("value", randomNumber(1, 12));
-    // var redNumber = $("#red").attr("value", randomNumber(1, 12));
 
     // reset function
 
     function reset () {
         startValue = 0
         $("#userScore").html(startValue);
+
         goalNumber = randomNumber(19, 120);
         $("#assignedNumber").html(goalNumber);
-        console.log("New number " + goalNumber);
+
         purpleNumber = randomNumber(1,12);
-        console.log("New purple " + purpleNumber);
         greenNumber = randomNumber(1, 12);
-        console.log("New green " + greenNumber);
         blueNumber = randomNumber(1, 12);
-        console.log("New blue " + blueNumber);
         redNumber = randomNumber(1, 12);
-        console.log("New red " + redNumber);
     }
 
     // win and lose function
@@ -76,29 +65,45 @@ $(document).ready(function () {
 
 
     // on click take the value of the number assigned to the gem clicked and add it to the total of the user score
-            $("#purple").on("click", function (){
-                startValue = startValue + purpleNumber;
-                $("#userScore").html(startValue);
-                winsLosses();
-            });
+    
+    $("#purple").on("click", {gemVar: purpleNumber}, playGame);
+    $("#green").on("click", {gemVar: greenNumber}, playGame);
+    $("#blue").on("click", {gemVar: blueNumber}, playGame);
+    $("#red").on("click", {gemVar: redNumber}, playGame);
 
-            $("#green").on("click", function(){
-                startValue = startValue + greenNumber;
-                $("#userScore").html(startValue);
-                winsLosses();
-            });
 
-            $("#blue").on("click", function(){
-                startValue = startValue + blueNumber;
-                $("#userScore").html(startValue);
-                winsLosses();
-            });
 
-            $("#red").on("click", function(){
-                startValue = startValue + redNumber;
-                $("#userScore").html(startValue);
-                winsLosses();
-            });
+    function playGame (event) {
+        $("#message").html("");
+        startValue = startValue + event.data.gemVar;
+        $("#userScore").html(startValue);
+        winsLosses();
+    };
+
+
+            // $("#purple").on("click", function (){
+            //     startValue = startValue + purpleNumber;
+            //     $("#userScore").html(startValue);
+            //     winsLosses();
+            // });
+
+            // $("#green").on("click", function(){
+            //     startValue = startValue + greenNumber;
+            //     $("#userScore").html(startValue);
+            //     winsLosses();
+            // });
+
+            // $("#blue").on("click", function(){
+            //     startValue = startValue + blueNumber;
+            //     $("#userScore").html(startValue);
+            //     winsLosses();
+            // });
+
+            // $("#red").on("click", function(){
+            //     startValue = startValue + redNumber;
+            //     $("#userScore").html(startValue);
+            //     winsLosses();
+            // });
 
     });
 

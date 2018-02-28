@@ -1,3 +1,30 @@
+.jumbotron {
+    text-align: center;
+    max-height: 175px;
+    font-family: "Plaster", cursive;
+    color: rgb(138, 210, 243);
+    background-image: repeating-radial-gradient(rgba(255, 0, 128, 0.89), rgb(54, 6, 94));
+    border-bottom: solid;
+    border-bottom-color: white;
+}
+
+body {
+    font-family: 'Poiret One', cursive;
+    background-image: repeating-linear-gradient(rgba(255, 0, 128, 0.89), rgb(54, 6, 94));
+    color: white;
+}
+
+#game {
+    background-color: white;
+    color: rgb(54, 6, 94);
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    border: solid;
+    border-color:rgb(138, 210, 243);
+    border-width: 5px;
+}
+
 img {
     max-width: 75px;
     height: auto;
@@ -16,4 +43,20 @@ img {
 #assignedNumber {
     font-size: 36px;
     text-align: center;
+}
+
+#instructions {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#winLose {
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#message {
+    font-family: "Plaster", cursive;
+    font-size: 24px;
 }
