@@ -23,6 +23,7 @@ body {
     border: solid;
     border-color:rgb(138, 210, 243);
     border-width: 5px;
+    margin-top: 15px;
 }
 
 img {

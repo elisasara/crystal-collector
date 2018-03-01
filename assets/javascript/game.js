@@ -18,7 +18,6 @@ $(document).ready(function () {
 
     // pick a random number between 19 and 120
     var goalNumber = randomNumber(19, 120);
-    console.log(goalNumber);
 
     // display that number in the appropriate div on the webpage
     $("#assignedNumber").html(goalNumber);
