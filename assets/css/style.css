@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Poiret One', cursive;
-    background-image: repeating-linear-gradient(rgba(255, 0, 128, 0.89), rgb(54, 6, 94));
+    background-image: repeating-linear-gradient(rgba(255, 0, 128, 0.89), rgb(54, 6, 94), rgba(255,0,128,0.89));
     color: white;
 }
 
